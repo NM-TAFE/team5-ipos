@@ -20,7 +20,8 @@ def index():
 def play(cell):
     # breakpoint()
     global current_player
-    if board[cell] == ' ':
+    game_over = check_winner(board) or check_draw(board)
+    if not game_over and 0 <= cell < len(board) and board[cell] == ' ':
         board[cell] = current_player
         if not check_winner(board):
             current_player = 'O' if current_player == 'X' else 'X'

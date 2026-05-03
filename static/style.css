@@ -35,6 +35,14 @@ body {
   background-color: #eee;
 }
 
+.cell.disabled {
+  cursor: default;
+}
+
+.cell.disabled:hover {
+  background-color: #fff;
+}
+
 .reset-button {
   padding: 10px 20px;
   background-color: #007bff;

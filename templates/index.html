@@ -12,7 +12,11 @@
         <h1>Tic Tac Toe</h1>
         <div class="board">
             {% for index in range(9) %}
+            {% if winner or draw or board[index] != ' ' %}
+            <span class="cell disabled">{{ board[index] }}</span>
+            {% else %}
             <a href="{{ url_for('game_routes.play', cell=index) }}" class="cell">{{ board[index] }}</a>
+            {% endif %}
             {% endfor %}
         </div>
         {% if winner %}
