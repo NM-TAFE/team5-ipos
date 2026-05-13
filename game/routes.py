@@ -5,7 +5,7 @@ from game.logic import check_winner, check_draw
 game_routes = Blueprint('game_routes', __name__)
 
 # Initialise game board and current player
-board = [' '] * 9
+board = {i: ' ' for i in range(9)}
 current_player = 'X'
 
 # Stack used to store the history of player moves.
@@ -60,7 +60,7 @@ def undo():
 def reset():
     global board, current_player, move_history
 
-    board = [' '] * 9
+    board = {i: ' ' for i in range(9)}
     current_player = 'X'
     move_history = []
 
