@@ -56,7 +56,6 @@ body {
   font-size: 1.2em;
   margin-bottom: 20px;
 }
-
 .game-over-cell {
     background-color: #d3d3d3;
     cursor: not-allowed;
